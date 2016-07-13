@@ -1,0 +1,210 @@
+// Muscle.css
+
+// Increase the flex-grow and order max values if you find yourself needing to
+// set them higher than the values here (and reduce to save lines when compiled)
+$flex-grow-max: 20; //Default 20
+$flex-order-max: 10; //Default 10
+
+$muscle-breakpoints: (
+  'xs' : 0px,
+  'sm'  : 767px,
+  'md'  : 992px,
+  'lg'  : 1200px
+);
+
+
+// Change to increase/decrease the increments of the generated sizing defenitions (basis, max, min). Default is increments of 10.
+// example - setting this to 5 would result in 5%, 10%, 15%, etc.
+$muscle-percent-increment: 10;
+
+@mixin expand-breakpoints($breakpoint-map) {
+  @each $prefix, $breakpoint-px in $breakpoint-map {
+    @media (min-width: $breakpoint-px) {
+      .#{$prefix}{
+        @content;
+      }
+    }
+  }
+}
+
+
+
+
+// The almighty root FLEX class
+@mixin f {
+  display: flex;
+  background-color: lightgreen; //
+} .f { @include f };
+
+// Alterations to the FLEX PARENT
+@mixin f--row {
+  flex-direction: row;
+} .f--row {@include f--row};
+
+@mixin f--row-reverse {
+  flex-direction: row-reverse;
+} .f--row-reverse {@include f--row-reverse};
+
+@mixin f--column {
+  flex-direction: column;
+} .f--column {@include f--column};
+
+@mixin f--column-reverse {
+  flex-direction: column;
+} .f--column-reverse {@include f--column-reverse};
+
+@mixin f--wrap {
+  flex-wrap: wrap;
+} .f--wrap {@incude f--wrap};
+
+//This isn't great naming for if/when align-conent comes in, but I just haven't had to use it very often (or really ever).
+@mixin f--align-start {
+  align-items: flex-start;
+} .f--align-start {@include f--align-start};
+
+@mixin f--align-center {
+  align-items: center;
+} .f--align-center {@include f--align-center};
+
+@mixin f--align-end {
+  align-items: flex-end;
+} .f--align-end {@include f--align-end};
+
+@mixin f--align-baseline {
+  align-items: baseline;
+} .f--align-baseline {@include f--align-baseline};
+
+@mixin f--align-stretch {
+  align-items: stretch;
+} .f--align-stretch {@include f--align-stretch};
+
+@mixin f--justify-start {
+  justify-content: flex-start;
+} .f--justify-start {@include f--justify-start};
+
+@mixin f--justify-center {
+  justify-content: center;
+} .f--justify-center {@include f--justify-center};
+
+@mixin f--justify-end {
+  justify-content: flex-end;
+} .f--justify-end {@include f--justify-end};
+
+@mixin f--justify-around {
+  justify-content: space-around;
+} .f--justify-around {@include f--justify-around};
+
+@mixin f--justify-between {
+  justify-content: between;
+} .f--justify-between {@include f--justify-between};
+
+
+//FLEX ITEMS (Applies the flex child rules)
+
+//Grow max value can be changed in variable settings up top
+@for $i from 0 through $flex-grow-max {
+  .f-item--#{$i}{
+    background-color: lightpink;
+    margin: 0.2rem;
+    flex-grow: $i;
+  }
+}
+
+//Order max value can be changed as well
+@for $i from 0 through $flex-order-max {
+  .f-item--order-#{$i}{
+    flex-order: $i;
+  }
+}
+@mixin f-item--order-first {
+  flex-order: -9999 !important;
+} .f-item--order-first {@include f-item--order-first};
+@mixin f-item--order-last {
+  flex-order: 9999 !important;
+} .f-item--order-last {@include f-item--order-last};
+
+
+// All sizing attirbutes (BASIS, MIN-WIDTH, MAX-WIDTH) are
+// based on percentages (for simplicity and line count)
+
+@for $i from 0 through 100 {
+  @if $i % $muscle-percent-increment == 0 {
+    .f-item--basis-#{$i}{
+      flex-basis: percentage($i/100);
+    }
+    .f-item--min-#{$i}{
+      flex-basis: percentage($i/100);
+    }
+    .f-item--max-#{$i}{
+      flex-basis: percentage($i/100);
+    }
+  }
+}
+
+@mixin f-item--align-start {
+  align-self: flex-start;
+} .f-item--align-start {@include f-item--align-start};
+
+@mixin f-item--align-center {
+  align-self: center;
+} .f-item--align-center {@include f-item--align-center};
+
+@mixin f-item--align-end {
+  align-self: flex-end;
+} .f-item--align-end {@include f-item--align-end};
+
+
+
+// Begin responsive definitions
+@include expand-breakpoints($muscle-breakpoints){
+  
+  &-f { @include f };
+  &-f--row {@include f--row};
+  &-f--row-reverse {@include f--row-reverse};
+  &-f--column {@include f--column};
+  &-f--column-reverse {@include f--column-reverse};
+  &-f--wrap {@incude f--wrap};
+  &-f--align-start {@include f--align-start};
+  &-f--align-center {@include f--align-center};
+  &-f--align-end {@include f--align-end};
+  &-f--align-baseline {@include f--align-baseline};
+  &-f--align-stretch {@include f--align-stretch};
+  &-f--justify-start {@include f--justify-start};
+  &-f--justify-center {@include f--justify-center};
+  &-f--justify-end {@include f--justify-end};
+  &-f--justify-around {@include f--justify-around};
+  &-f--justify-between {@include f--justify-between};
+
+  @for $i from 0 through $flex-grow-max {
+    &-f-item--#{$i}{
+      flex-grow: $i;
+    }
+  }
+
+  @for $i from 0 through $flex-order-max {
+    &-f-item--order-#{$i}{
+      flex-order: $i;
+    }
+  }
+
+  &-f-item--order-first {@include f-item--order-first};
+  &-f-item--order-last {@include f-item--order-last};
+  &-f-item--align-start {@include f-item--align-start};
+  &-f-item--align-center {@include f-item--align-center};
+  &-f-item--align-end {@include f-item--align-end};
+
+  @for $i from 0 through 100 {
+    @if $i % $muscle-percent-increment == 0 {
+      &-f-item--basis-#{$i}{
+        flex-basis: percentage($i/100);
+      }
+      &-f-item--min-#{$i}{
+        flex-basis: percentage($i/100);
+      }
+      &-f-item--max-#{$i}{
+        flex-basis: percentage($i/100);
+      }
+    }
+  }
+ 
+}
