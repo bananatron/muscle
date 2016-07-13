@@ -1,9 +1,11 @@
 # Muscle.css
 
-##WAT?
+###WAT?
 Muscle is a responsive flexbox css library to quickly 
 prototype layouts and elements. It presupposes that you 
 have some working knowledge of flexbox.
+
+
 
 ###WHY?
 I was sick of redefining the same flex attributes
