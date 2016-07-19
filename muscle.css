@@ -3,7 +3,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: lightgreen;
 }
 
 .f--row {
@@ -112,7 +111,6 @@
 }
 
 .f-item--0 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -121,7 +119,6 @@
 }
 
 .f-item--1 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -130,7 +127,6 @@
 }
 
 .f-item--2 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
@@ -139,7 +135,6 @@
 }
 
 .f-item--3 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 3;
   -webkit-flex-grow: 3;
@@ -148,7 +143,6 @@
 }
 
 .f-item--4 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 4;
   -webkit-flex-grow: 4;
@@ -157,7 +151,6 @@
 }
 
 .f-item--5 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 5;
   -webkit-flex-grow: 5;
@@ -166,7 +159,6 @@
 }
 
 .f-item--6 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 6;
   -webkit-flex-grow: 6;
@@ -175,7 +167,6 @@
 }
 
 .f-item--7 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 7;
   -webkit-flex-grow: 7;
@@ -184,7 +175,6 @@
 }
 
 .f-item--8 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 8;
   -webkit-flex-grow: 8;
@@ -193,7 +183,6 @@
 }
 
 .f-item--9 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 9;
   -webkit-flex-grow: 9;
@@ -202,7 +191,6 @@
 }
 
 .f-item--10 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 10;
   -webkit-flex-grow: 10;
@@ -211,7 +199,6 @@
 }
 
 .f-item--11 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 11;
   -webkit-flex-grow: 11;
@@ -220,7 +207,6 @@
 }
 
 .f-item--12 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 12;
   -webkit-flex-grow: 12;
@@ -229,7 +215,6 @@
 }
 
 .f-item--13 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 13;
   -webkit-flex-grow: 13;
@@ -238,7 +223,6 @@
 }
 
 .f-item--14 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 14;
   -webkit-flex-grow: 14;
@@ -247,7 +231,6 @@
 }
 
 .f-item--15 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 15;
   -webkit-flex-grow: 15;
@@ -256,7 +239,6 @@
 }
 
 .f-item--16 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 16;
   -webkit-flex-grow: 16;
@@ -265,7 +247,6 @@
 }
 
 .f-item--17 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 17;
   -webkit-flex-grow: 17;
@@ -274,7 +255,6 @@
 }
 
 .f-item--18 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 18;
   -webkit-flex-grow: 18;
@@ -283,7 +263,6 @@
 }
 
 .f-item--19 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 19;
   -webkit-flex-grow: 19;
@@ -292,7 +271,6 @@
 }
 
 .f-item--20 {
-  background-color: lightpink;
   margin: 0.2rem;
   -webkit-box-flex: 20;
   -webkit-flex-grow: 20;
@@ -574,7 +552,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: lightgreen;
   }
   .xs-f--row {
     -webkit-box-orient: horizontal;
@@ -1018,7 +995,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: lightgreen;
   }
   .sm-f--row {
     -webkit-box-orient: horizontal;
@@ -1462,7 +1438,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: lightgreen;
   }
   .md-f--row {
     -webkit-box-orient: horizontal;
@@ -1906,7 +1881,6 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: lightgreen;
   }
   .lg-f--row {
     -webkit-box-orient: horizontal;
