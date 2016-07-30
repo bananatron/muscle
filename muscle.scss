@@ -33,7 +33,6 @@ $muscle-percent-increment: 10;
 // The almighty root FLEX class
 @mixin f {
   display: flex;
-  background-color: lightgreen; //
 } .f { @include f };
 
 // Alterations to the FLEX PARENT
@@ -104,7 +103,6 @@ $muscle-percent-increment: 10;
 //Grow max value can be changed in variable settings up top
 @for $i from 0 through $flex-grow-max {
   .f-item--#{$i}{
-    background-color: lightpink;
     margin: 0.2rem;
     flex-grow: $i;
   }
